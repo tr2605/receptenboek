@@ -15,21 +15,27 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 
-<body>
+<body class="body-index" >
 
 <?php include('header.php'); ?>
+
     <div class=container>
         <div class=container_width>
             <div class="row">
                 <?php foreach ($all_recepten as $recept) : ?>
                     <a href="recept-detail.php?nummer=<?php echo $recept["nummer"] ?>">
-                        <img src="images\<?php echo $recept["foto"] ?>" alt="recept" width="300" height="220">
+                        <img class="image 2" src="images\<?php echo $recept["foto"] ?>" alt="recept" width="300" height="220">
                         <h3><?php echo $recept["titel"] ?></h3>
                     </a>
                 <?php endforeach; ?>
             </div>
         </div>
     </div>
+    <div class="specials">
+    <h3>Aantal recepten:<?php echo $recept["nummer"] ?></h3>                    
+
+    </div>
+
     
 </body>
 <?php include('footer.php'); ?>

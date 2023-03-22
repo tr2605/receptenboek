@@ -1,6 +1,8 @@
 .topnav {
     background-color: #2a5c35;
     overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .topnav a:hover {
@@ -11,28 +13,28 @@
     border-bottom: 3px solid rgb(0, 255, 115);
 }
 
-
 .topnav a {
     float: left;
-    color: #000000;
+    color: #fff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-
-
 }
-
 
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
 
-
 .topnav a.active {
     background-color: #4a4f4f;
     color: white;
+}
+.topnav h1{
+    font-style: oblique;
+    color: #fff;
+    margin-left: 30px;
 }
 
 .container {
@@ -41,7 +43,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+
 }
+
+.container a {
+    text-decoration: none;
+    color: #000000;
+}
+
 
 .container_width {
     width: 85%;
@@ -59,7 +68,8 @@
     display: table;
     clear: both;
 }
-footer {
+
+.footer1 {
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -71,4 +81,57 @@ footer {
     background-color: rgb(67, 83, 72);
     color: white;
     text-align: center;
+}
+
+.footer2 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: bottom;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(67, 83, 72);
+    color: white;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+}
+
+.list ul {
+    width: 30%;
+    list-style-type: none;
+}
+
+.list h3 {
+    color: white;
+}
+
+.list h4 {
+    color: lightgreen;
+}
+
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.body-detail {
+    height: 120;
+    background-color: #8ec0d5;
+    
+}
+.body-index{
+    background-color: #8ec0d5;
+    color: #ddd;
+}
+.nummer{
+    color: #ddd;
 }
