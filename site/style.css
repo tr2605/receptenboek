@@ -89,17 +89,17 @@
 }
 
 .footer2 {
+    display: flex;
+    justify-content: center;
     background-color: rgb(34, 70, 84);
     color: #fff;
     padding: 20px;
-    text-align: center;
     position: bottom;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 98%;
     background-color: rgb(25, 55, 66);
     color: white;
-    text-align: center;
 }
 
 .list {
