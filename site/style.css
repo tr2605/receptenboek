@@ -14,8 +14,9 @@
 }
 
 .topnav a {
-    float: left;
-    color: #fff;
+    display: flex;
+    display: inline-block;
+    color: rgb(137, 200, 173);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -23,7 +24,7 @@
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: #8de09a;
     color: black;
 }
 
@@ -31,9 +32,12 @@
     background-color: #4a4f4f;
     color: white;
 }
-.topnav h1{
+
+.topnav h1 {
+    display: flex;
+    justify-content: center;
     font-style: oblique;
-    color: #fff;
+    color: rgb(137, 200, 173);
     margin-left: 30px;
 }
 
@@ -78,13 +82,13 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(67, 83, 72);
+    background-color: rgb(21, 46, 56);
     color: white;
     text-align: center;
 }
 
 .footer2 {
-    background-color: #333;
+    background-color: rgb(34,70,84);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -92,7 +96,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(67, 83, 72);
+    background-color: rgb(25, 55, 66);
     color: white;
     text-align: center;
 }
@@ -120,18 +124,62 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .body-detail {
-    height: 120;
-    background-color: #8ec0d5;
-    
+    height: 120vh;
+    background-color: #dbb860;
+
 }
-.body-index{
-    background-color: #8ec0d5;
+
+.body-index {
+    background-color: #dbb860;
     color: #ddd;
 }
-.nummer{
-    color: #ddd;
+
+.nummer {
+    color: #dddddd;
+}
+
+.body-special {
+    background-color: #dbb860;
+    color : rgb(66, 106, 88);
+}
+
+.box {
+    display: flex;
+    justify-content: left;
+    font: italic 18px Arial;
+    background-color: #d52b2b;
+    margin-right: 0px;
+    color: #333333;
+    border-style: ridge;
+    padding: 2px 4px 2px 4px;
+    border-top: 2px solid #ce3838;
+    border-right: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    border-left: 2px solid #ce3838;
+    box-shadow: 5px 10px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.box h3 {
+    color: rgb(137, 200, 173);
+}
+
+.text-col {
+    color: rgb(66, 106, 88);
+    margin-left: 100px;
+}
+
+.explo {
+    font-size: 18px;
+    font: italic;
+}
+.titel-recept{
+    display: flex;
+    justify-content: center;
 }

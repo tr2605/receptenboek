@@ -1,3 +1,3 @@
 <footer class="footer2">
-    <p>&copy; 2023 Cooking Recipe. All rights reserved.</p>
+    <p>&copy; 2023 Protugese Recepten. Gemaakt door Tim Rogier.</p>
 </footer>

@@ -22,31 +22,33 @@ $recept = mysqli_fetch_assoc($result);
         <div class=image>
             <img src="images\<?php echo $recept["foto"] ?>" alt="recept" width="540" height="400">
         </div>
-        <h1><?php echo $recept["titel"] ?></h1>
-        <h3>Tijdsduur: <?php echo $recept["duur"] ?></h3>
-        <h3>Moeilijkheidsgraad: <?php echo $recept["moeilijkheidsgraad"] ?></h3>
-        <h3>Menu gang: <?php echo $recept["menu gang"] ?>gerecht</h3>
-        <ul>
-            <h3>Ingredienten:</h3>
+        <div class="text-col">
+            <h1><?php echo $recept["titel"] ?></h1>
+            <h3>Tijdsduur: <?php echo $recept["duur"] ?></h3>
+            <h3>Moeilijkheidsgraad: <?php echo $recept["moeilijkheidsgraad"] ?></h3>
+            <h3>Menu gang: <?php echo $recept["menu gang"] ?>gerecht</h3>
+            <ul>
+                <h3>Ingredienten:</h3>
+                <div class="explo">
+                    <?php
+                    $ingredienten = explode(",", $recept["ingredienten"]);
+                    foreach ($ingredienten as $ingredient) {
+                        echo "<li>" . trim($ingredient) . "</li>";
+                    }
+                    ?>
+            </ul>
+            <h3>instructie op hoe te maken:</h3>
             <?php
-            $ingredienten = explode(",", $recept["ingredienten"]);
-
+            $ingredienten = explode(".", $recept["instructie"]);
             foreach ($ingredienten as $ingredient) {
                 echo "<li>" . trim($ingredient) . "</li>";
             }
             ?>
-        </ul>
+            <div class="nummer">
+                <h3>Nummer recept:<?php echo $recept["nummer"] ?></h3>
+            </div>
+        </div>
     </div>
-    <h3>instructie op hoe te maken:</h3>
-    <?php
-    $ingredienten = explode(".", $recept["instructie"]);
-
-    foreach ($ingredienten as $ingredient) {
-        echo "<li>" . trim($ingredient) . "</li>";
-    }
-    ?>
-    <div class="nummer">
-        <h3>Nummer recept:<?php echo $recept["nummer"] ?></h3>
     </div>
     </div>
 </body>
