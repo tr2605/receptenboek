@@ -26,6 +26,7 @@
 .topnav a:hover {
     background-color: #8de09a;
     color: black;
+    border-radius: 9px;
 }
 
 .topnav a.active {
@@ -88,7 +89,7 @@
 }
 
 .footer2 {
-    background-color: rgb(34,70,84);
+    background-color: rgb(34, 70, 84);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -143,7 +144,7 @@
 
 .body-special {
     background-color: #dbb860;
-    color : rgb(66, 106, 88);
+    color: rgb(66, 106, 88);
 }
 
 .box {
@@ -154,7 +155,7 @@
     margin-right: 0px;
     color: #333333;
     border-style: ridge;
-    padding: 2px 4px 2px 4px;
+    padding: 2px 2px 2px 2px;
     border-top: 2px solid #ce3838;
     border-right: 2px solid #333333;
     border-bottom: 2px solid #333333;
@@ -179,7 +180,8 @@
     font-size: 18px;
     font: italic;
 }
-.titel-recept{
+
+.titel-recept {
     display: flex;
     justify-content: center;
 }

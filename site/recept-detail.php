@@ -29,6 +29,7 @@ $recept = mysqli_fetch_assoc($result);
             <h3>Tijdsduur: <?php echo $recept["duur"] ?></h3>
             <h3>Moeilijkheidsgraad: <?php echo $recept["moeilijkheidsgraad"] ?></h3>
             <h3>Menu gang: <?php echo $recept["menu gang"] ?>gerecht</h3>
+
             <ul>
                 <h3>Ingredienten:</h3>
                 <div class="explo">
@@ -39,17 +40,23 @@ $recept = mysqli_fetch_assoc($result);
                     }
                     ?>
             </ul>
-            <h3>instructie op hoe te maken:</h3>
-            <?php
-            $ingredienten = explode(".", $recept["instructie"]);
-            foreach ($ingredienten as $ingredient) {
-                echo "<li>" . trim($ingredient) . "</li>";
-            }
-            ?>
+
+            <ul>
+                <h3>instructie over hoe te maken:</h3>
+                <div class="explo">
+                    <?php
+                    $ingredienten = explode(".", $recept["instructie"]);
+                    foreach ($ingredienten as $ingredient) {
+                        echo "<li>" . trim($ingredient) . "</li>";
+                    }
+                    ?>
+            </ul>
+
             <div class="nummer">
                 <h3>Nummer recept:<?php echo $recept["nummer"] ?></h3>
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>
