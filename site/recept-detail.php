@@ -17,7 +17,8 @@ $recept = mysqli_fetch_assoc($result);
 </head>
 
 <body class="body-detail">
-    <?php include('header2.php'); ?>
+    <?php include('header.php'); ?>
+    <?php include('nav2.php'); ?>
     <div>
         <div class=image>
             <div class="box">

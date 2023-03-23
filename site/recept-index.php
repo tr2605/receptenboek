@@ -18,6 +18,7 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body class="body-index">
 
     <?php include('header.php'); ?>
+    <?php include('nav1.php'); ?>
 
     <div class=container>
         <div class=container_width>

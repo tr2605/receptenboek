@@ -14,7 +14,8 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <title>Specials</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
-<?php include('header3.php'); ?>
+<?php include('header.php'); ?>
+<?php include('nav3.php'); ?>
 
 <body class="body-special">
 
