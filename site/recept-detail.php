@@ -20,7 +20,9 @@ $recept = mysqli_fetch_assoc($result);
     <?php include('header2.php'); ?>
     <div>
         <div class=image>
-            <img src="images\<?php echo $recept["foto"] ?>" alt="recept" width="540" height="400">
+            <div class="box">
+                <img src="images\<?php echo $recept["foto"] ?>" alt="recept" width="540" height="400">
+            </div>
         </div>
         <div class="text-col">
             <h1><?php echo $recept["titel"] ?></h1>
