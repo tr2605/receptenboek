@@ -26,9 +26,9 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="box">
                     <?php foreach ($all_recepten as $recept) : ?>
                         <a href="recept-detail.php?nummer=<?php echo $recept["nummer"] ?>">
-                            <img class="image 2" src="images\<?php echo $recept["foto"] ?>" alt="recept" width="300" height="220";>
+                            <img class="image 2" src="images\<?php echo $recept["foto"] ?>" alt="recept" width="300" height="220" ;>
                             <div class="titel-recept">
-                            <h3><?php echo $recept["titel"] ?></h3>
+                                <h3><?php echo $recept["titel"] ?></h3>
                             </div>
                         </a>
                     <?php endforeach; ?>
@@ -38,10 +38,7 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </div>
     <div class="specials">
         <h3>Aantal recepten:<?php echo $recept["nummer"] ?></h3>
-
     </div>
-
-
 </body>
 <?php include('footer.php'); ?>
 
