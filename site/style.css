@@ -190,3 +190,31 @@
     display: flex;
     justify-content: center;
 }
+.ingredienten-table {
+    display: table;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ingredienten-table li {
+    display: table-row;
+    padding: 5px 0;
+}
+
+.ingredienten-table li:before {
+    content: "";
+    display: table-cell;
+    width: 30%;
+    padding-right: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.ingredienten-table li:last-child {
+    padding-bottom: 0;
+}
+
+.ingredienten-table li:last-child:before {
+    padding-bottom: 5px;
+}
