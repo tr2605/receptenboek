@@ -160,7 +160,7 @@
     margin-right: 0px;
     color: #333333;
     border-style: ridge;
-    padding: 2px 2px 2px 2px;
+    padding: 4px 4px 35px 4px;
     border-top: 2px solid #ce3838;
     border-right: 2px solid #333333;
     border-bottom: 2px solid #333333;
@@ -189,4 +189,4 @@
 .titel-recept {
     display: flex;
     justify-content: center;
-}
+}4
