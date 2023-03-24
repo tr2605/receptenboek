@@ -32,7 +32,7 @@ $recept = mysqli_fetch_assoc($result);
             <h3>Menu gang: <?php echo $recept["menu gang"] ?>gerecht</h3>
 
             <ul>
-                <h3>Ingredienten:</h3>
+                <h2>Ingredienten:</h2>
                 <div class="explo">
                     
                     <?php
@@ -44,7 +44,7 @@ $recept = mysqli_fetch_assoc($result);
             </ul>
 
             <ul>
-                <h3>instructie over hoe te maken:</h3>
+                <h2>instructie over hoe te maken:</h2>
                 <div class="explo">
 
                     <?php
