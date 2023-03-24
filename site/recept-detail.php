@@ -34,7 +34,6 @@ $recept = mysqli_fetch_assoc($result);
             <ul>
                 <h3>Ingredienten:</h3>
                 <div class="explo">
-                    <div class="ingredienten-table">
                     <?php
                     $ingredienten = explode(",", $recept["ingredienten"]);
                     foreach ($ingredienten as $ingredient) {
@@ -42,11 +41,11 @@ $recept = mysqli_fetch_assoc($result);
                     }
                     ?>
             </ul>
-        </div>
 
             <ul>
                 <h3>instructie over hoe te maken:</h3>
                 <div class="explo">
+                    
                     <?php
                     $ingredienten = explode(".", $recept["instructie"]);
                     foreach ($ingredienten as $ingredient) {
