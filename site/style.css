@@ -190,3 +190,8 @@
     display: flex;
     justify-content: center;
 }
+.table2 th{
+    float: left;
+    clear: left;
+    
+}
