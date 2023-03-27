@@ -18,21 +18,21 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <?php include('nav3.php'); ?>
 
 <body class="body-special">
-<?php
-$sql = "SELECT * FROM receptenboek ORDER BY duur DESC LIMIT 1";
-$result = mysqli_query($conn, $sql);
+    <?php
+    $sql = "SELECT * FROM receptenboek ORDER BY duur DESC LIMIT 1";
+    $result = mysqli_query($conn, $sql);
 
-//display het gerecht in table
-if (mysqli_num_rows($result) > 0) {
-  echo "<table><tr><th>titel</th><th>duur</th></tr>";
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "<tr><td>" . $row["titel"] . "</td><td>" . $row["duur"] . " minuten</td></tr>";
-  }
-  echo "</table>";
-} else {
-  echo "0 results";
-}
-?>
+    //display het gerecht in
+    if (mysqli_num_rows($result) > 0) {
+        echo "<table><tr><th>titel</th><th>duur</th></tr>";
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr><td>" . $row["titel"] . "</td><td>" . $row["duur"] . " minuten</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "0 results"; 
+    }
+    ?>
 
 
 

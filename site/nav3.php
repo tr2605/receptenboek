@@ -7,6 +7,3 @@
         <?php endforeach; ?>
         <a href="specials.php">Specials</a>
 </div>
-</div>
-</div>
-</div>
