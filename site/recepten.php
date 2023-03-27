@@ -4,6 +4,7 @@ $id  = $_GET['nummer'];
 $sql = "SELECT * FROM database_receptenboek WHERE nummer = $id";
 $result = mysqli_query($conn, $sql);
 $recept = mysqli_fetch_assoc($result);
+$all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
