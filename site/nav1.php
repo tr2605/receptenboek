@@ -1,13 +1,10 @@
 <div class="topnav">
-        <h1>Recepten van de portugese keuken</h1>
-        <a class="imger">
-            <a href="recept.php">Home</a>
-            <a href="recepten.php?nummer=1">Cataplana de Marisco</a>
-            <a href="recepten.php?nummer=2">Francesinha</a>
-            <a href="recepten.php?nummer=3">Bacalhau</a>
-            <a href="recepten.php?nummer=4">Pastel de nata</a>
-            <a href="recepten.php?nummer=5">Port</a>
-            <a href="specials.php">Specials</a>      
-            </div>
-        </div>
-       
+    <h1>Recepten van de portugese keuken</h1>
+    <a class="imger">
+        <a href="recept.php">Home</a>
+        <?php foreach ($all_recepten as $recept) : ?>
+            <a href="recepten.php?nummer=<?php echo $recept["nummer"] ?>"><?php echo $recept["titel"] ?></a>
+            <a href="specials.php">Specials</a>
+        <?php endforeach; ?>
+</div>
+</div>

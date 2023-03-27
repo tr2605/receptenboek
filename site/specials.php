@@ -18,19 +18,21 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <?php include('nav3.php'); ?>
 
 <body class="body-special">
+<?php
+$sql = "SELECT * FROM receptenboek ORDER BY duur DESC LIMIT 1";
+$result = mysqli_query($conn, $sql);
 
-    <h2>Het gerecht dat het langst duurt om te maken: Bacalhao</h2><br>
-    <h2>Gerechten gesorteert op moeilijkheidsgraad: 
-        <table>
-            <tr>
-                <th>Francesinha<br>makkelijk/middel  _</th>
-                <th>Pastel de nata<br>makkelijk/middel  _</th>
-                <th>Cataplana de Marisco <br>middel_</th>
-                <th>Port<br>middel/geadvanceerd_</th>
-                <th>Bacalhau<br>geadvanceerd_</th>
-            </tr>
-        </table>
-
+//display het gerecht in table
+if (mysqli_num_rows($result) > 0) {
+  echo "<table><tr><th>titel</th><th>duur</th></tr>";
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr><td>" . $row["titel"] . "</td><td>" . $row["duur"] . " minuten</td></tr>";
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
+}
+?>
 
 
 
