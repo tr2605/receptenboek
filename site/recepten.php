@@ -19,7 +19,7 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body class="body-detail">
     <?php include('header.php'); ?>
-    <?php include('nav1.php'); ?>
+    <?php include('nav.php'); ?>
     <div>
         <div class=image>
             <div class="box">
@@ -65,6 +65,6 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </div>
     </div>
 </body>
-<?php include('footer2.php'); ?>
+<?php include('footer.php'); ?>
 
 </html>
