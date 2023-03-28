@@ -19,6 +19,7 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 <?php include('header.php'); ?>
 <?php include('nav.php'); ?>
+<img src="images\recipe-by-dall-e.png" alt="hoofdpic" width="300" height="220" ;>
 <h1>Specials</h1>
 <body class="body-special">
     <div class="specials">
