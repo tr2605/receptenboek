@@ -18,8 +18,10 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </head>
 
 <body class="body-detail">
+    <div>
     <?php include('header.php'); ?>
     <?php include('nav.php'); ?>
+    </div>
     <div>
         <div class=image>
             <div class="box">

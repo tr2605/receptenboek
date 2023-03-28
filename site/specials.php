@@ -11,7 +11,12 @@ require 'database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Specials</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
-</head>
+</head><?php
+require 'database.php';
+$sql = "SELECT * FROM database_receptenboek";
+$result = mysqli_query($conn, $sql);
+$all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+?>
 <?php include('header.php'); ?>
 <?php include('nav.php'); ?>
 

@@ -77,34 +77,20 @@
 
 .footer1 {
     display: flex;
+    justify-content: center;
     font-style: oblique;
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    text-align: center;
-    position:relative;
+    padding: 10px;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: rgb(21, 46, 56);
     color: white;
-    text-align: center;
 }
 
-.footer2 {
-    font-style: oblique;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(34, 70, 84);
-    color: #fff;
-    padding: 20px;
-    position: bottom;
-    left: 0;
-    bottom: 0;
-    width: 98%;
-    background-color: rgb(25, 55, 66);
-    color: white;
-}
+
 
 .list {
     display: flex;
@@ -152,7 +138,8 @@
     background-color: #dbb860;
     color: rgb(66, 106, 88);
     font-style: oblique;
-    font-size: 20px;
+    font-size: 18px;
+    height: 40vh;
 }
 
 .box {
@@ -193,18 +180,21 @@
     display: flex;
     justify-content: center;
 }
-.table2 th{
+
+.table2 th {
     float: left;
     clear: left;
-    
+
 }
-.specials{
+
+.specials {
     display: flex;
     padding: 20px;
     margin: 20px;
 }
-.navver{
+
+.navver {
     font: oblique;
-   font-size: 18px;
+    font-size: 18px;
     color: rgb(137, 200, 173);
 }
