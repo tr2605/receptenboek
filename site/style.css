@@ -197,3 +197,8 @@
     clear: left;
     
 }
+.specials{
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+}

@@ -19,7 +19,7 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body class="body-detail">
     <?php include('header.php'); ?>
-    <?php include('nav2.php'); ?>
+    <?php include('nav1.php'); ?>
     <div>
         <div class=image>
             <div class="box">

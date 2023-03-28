@@ -1,0 +1,27 @@
+
+
+<div class="topnav">
+    <h1>Recepten van de portugese keuken</h1>
+    <a class="imger">
+        <a href="recept.php">Home</a>
+        <?php foreach ($all_recepten as $recept) : ?>
+            <a href="recepten.php?nummer=<?php echo $recept["nummer"] ?>"><?php echo $recept["titel"] ?></a>
+        <?php endforeach; ?>
+        <a href="specials.php">Specials</a>
+        <?php
+        $sql = "SELECT COUNT(*) as total_numbers FROM database_receptenboek WHERE nummer REGEXP '^[0-9]+$'";
+
+        // Execute query
+        $result = mysqli_query($conn, $sql);
+        
+        if ($result) {
+            // Fetch the result
+            $row = mysqli_fetch_assoc($result);
+            // Print the total number of numbers in the database
+            echo "Total numbers in the database: " . $row["total_numbers"];
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+        ?>
+</div>
+</div>

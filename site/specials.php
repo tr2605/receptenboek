@@ -13,9 +13,11 @@ require 'database.php';
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 <?php include('header.php'); ?>
-<?php include('nav3.php'); ?>
+<?php include('nav.php'); ?>
 
 <body class="body-special">
+    <div class="specials">
+        <h1>Specials</h1>
 <?php
 require 'database.php';
 $sql = "SELECT titel FROM database_receptenboek ORDER BY duur DESC LIMIT 1";
@@ -25,7 +27,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   // Output title with longest duration
   $row = mysqli_fetch_assoc($result);
-  echo "gerecht dat het langst duur te maken: " . $row["titel"];
+  echo "Gerecht dat het langst duurt om te maken: " . $row["titel"];
 } else {
   echo "No data found";
 }
@@ -39,7 +41,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   // Output title with highest moeilijkheidsgraad
   $row = mysqli_fetch_assoc($result);
-  echo "het gerecht met de hoogste moeilijkheidsgraad is: " . $row["titel"];
+  echo "Het gerecht met de hoogste moeilijkheidsgraad is: " . $row["titel"];
 } else {
   echo "No data found";
 }
@@ -53,11 +55,12 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   // Output title with longest ingredienten text
   $row = mysqli_fetch_assoc($result);
-  echo "het recept met de meeste ingredienten is: " . $row["titel"];
+  echo "Het recept met de meeste ingredienten is: " . $row["titel"];
 } else {
   echo "No data found";
 }
 ?>
+    </div>
 </body>
 <?php include('footer.php'); ?>
 
