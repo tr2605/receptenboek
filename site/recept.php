@@ -40,6 +40,6 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <h3>Aantal recepten:<?php echo $recept["nummer"] ?></h3>
     </div>
 </body>
-<?php include('footer.php'); ?>
+<?php include('footer1.php'); ?>
 
 </html>

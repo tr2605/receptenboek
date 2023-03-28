@@ -89,6 +89,20 @@
     background-color: rgb(21, 46, 56);
     color: white;
 }
+.footer2 {
+    display: flex;
+    justify-content: center;
+    font-style: oblique;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(21, 46, 56);
+    color: white;
+}
 
 
 

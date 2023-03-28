@@ -1,11 +1,3 @@
-<?php
-require 'database.php';
-$id  = $_GET['nummer'];
-$sql = "SELECT * FROM database_receptenboek WHERE nummer = $id";
-$result = mysqli_query($conn, $sql);
-$recept = mysqli_fetch_assoc($result);
-$all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +5,36 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php
+    require 'database.php';
+    $id  = $_GET['nummer'];
+    $sql = "SELECT * FROM database_receptenboek WHERE nummer = $id";
+    $result = mysqli_query($conn, $sql);
+    $recept = mysqli_fetch_assoc($result);
+    $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);?>
     <title><?php echo $recept["titel"] ?></title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 
 <body class="body-detail">
-    <div>
-    <?php include('header.php'); ?>
-    <?php include('nav.php'); ?>
+    <div><?php
+            require 'database.php';
+            $sql = "SELECT * FROM database_receptenboek";
+            $result = mysqli_query($conn, $sql);
+            $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            ?>
+        <?php include('header.php'); ?>
+        <?php include('nav.php'); ?>
+
     </div>
+    <?php
+    require 'database.php';
+    $id  = $_GET['nummer'];
+    $sql = "SELECT * FROM database_receptenboek WHERE nummer = $id";
+    $result = mysqli_query($conn, $sql);
+    $recept = mysqli_fetch_assoc($result);
+    $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    ?>
     <div>
         <div class=image>
             <div class="box">
@@ -37,7 +50,7 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <ul>
                 <h2>Ingredienten:</h2>
                 <div class="explo">
-                    
+
                     <?php
                     $ingredienten = explode(",", $recept["ingredienten"]);
                     foreach ($ingredienten as $ingredient) {
@@ -67,6 +80,6 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </div>
     </div>
 </body>
-<?php include('footer.php'); ?>
+<?php include('footer1.php'); ?>
 
 </html>

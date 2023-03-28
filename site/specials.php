@@ -19,10 +19,10 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 <?php include('header.php'); ?>
 <?php include('nav.php'); ?>
-
+<h1>Specials</h1>
 <body class="body-special">
     <div class="specials">
-        <h1>Specials</h1>
+        
 <?php
 require 'database.php';
 $sql = "SELECT titel FROM database_receptenboek ORDER BY duur DESC LIMIT 1";
@@ -67,6 +67,6 @@ if (mysqli_num_rows($result) > 0) {
 ?>
     </div>
 </body>
-<?php include('footer.php'); ?>
+<?php include('footer2.php'); ?>
 
 </html>
