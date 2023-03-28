@@ -1,8 +1,6 @@
 <?php
 require 'database.php';
-$sql = "SELECT * FROM database_receptenboek";
-$result = mysqli_query($conn, $sql);
-$all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,27 +16,48 @@ $all_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <?php include('nav3.php'); ?>
 
 <body class="body-special">
-    <h3>Recept dat het langst duurt om te maken: Bacalhau</h3>
-    <p>15 uur 30 min</p>
+<?php
+require 'database.php';
+$sql = "SELECT titel FROM database_receptenboek ORDER BY duur DESC LIMIT 1";
 
-    <table class="table2">
-        <h3>gerechten gesoorteerd op moeilijkheidsgraad
-            <tr>
-                <th> Pastel de nata - makkelijk/middel</th><br>
-                <th> Francesinha - makkelijk/middel</th>
-                <th> Cataplana de Marisco - middel</th>
-                <th> Port - middel/geadvanceerd </th>
-                <th> Bacalhau - geadvanceerd </th>
-            </tr>
-    </table>
+$result = mysqli_query($conn, $sql);
 
+if (mysqli_num_rows($result) > 0) {
+  // Output title with longest duration
+  $row = mysqli_fetch_assoc($result);
+  echo "gerecht dat het langst duur te maken: " . $row["titel"];
+} else {
+  echo "No data found";
+}
+?>
+<br>
+<?php
+$sql = "SELECT titel FROM database_receptenboek ORDER BY moeilijkheidsgraad DESC LIMIT 1";
 
+$result = mysqli_query($conn, $sql);
 
+if (mysqli_num_rows($result) > 0) {
+  // Output title with highest moeilijkheidsgraad
+  $row = mysqli_fetch_assoc($result);
+  echo "het gerecht met de hoogste moeilijkheidsgraad is: " . $row["titel"];
+} else {
+  echo "No data found";
+}
+?>
+<br>
+<?php
+$sql = "SELECT titel FROM database_receptenboek ORDER BY LENGTH(ingredienten) DESC LIMIT 1";
 
+$result = mysqli_query($conn, $sql);
 
-
-
-
+if (mysqli_num_rows($result) > 0) {
+  // Output title with longest ingredienten text
+  $row = mysqli_fetch_assoc($result);
+  echo "het recept met de meeste ingredienten is: " . $row["titel"];
+} else {
+  echo "No data found";
+}
+?>
 </body>
 <?php include('footer.php'); ?>
 
