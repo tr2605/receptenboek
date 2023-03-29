@@ -11,14 +11,9 @@
         
             <?php
             $sql = "SELECT COUNT(*) as total_numbers FROM database_receptenboek WHERE nummer REGEXP '^[0-9]+$'";
-
-            // Execute query
             $result = mysqli_query($conn, $sql);
-
             if ($result) {
-                // Fetch the result
                 $row = mysqli_fetch_assoc($result);
-                // Print the total number of numbers in the database
                 echo "Totaal aantal gerechten: " . $row["total_numbers"];
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);

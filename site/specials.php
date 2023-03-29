@@ -31,7 +31,6 @@ $sql = "SELECT titel FROM database_receptenboek ORDER BY duur DESC LIMIT 1";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-  // Output title with longest duration
   $row = mysqli_fetch_assoc($result);
   echo "Gerecht dat het langst duurt om te maken: " . $row["titel"];
 } else {
@@ -45,7 +44,6 @@ $sql = "SELECT titel FROM database_receptenboek ORDER BY moeilijkheidsgraad DESC
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-  // Output title with highest moeilijkheidsgraad
   $row = mysqli_fetch_assoc($result);
   echo "Het gerecht met de hoogste moeilijkheidsgraad is: " . $row["titel"];
 } else {
@@ -59,7 +57,6 @@ $sql = "SELECT titel FROM database_receptenboek ORDER BY LENGTH(ingredienten) DE
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-  // Output title with longest ingredienten text
   $row = mysqli_fetch_assoc($result);
   echo "Het recept met de meeste ingredienten is: " . $row["titel"];
 } else {
